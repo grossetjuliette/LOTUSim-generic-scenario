@@ -1,10 +1,10 @@
 from setuptools import find_packages, setup
 
-package_name = "lrauv"
+package_name = "lrauv_propeller"
 
 setup(
     name=package_name,
-    version="0.0.1",
+    version="0.1.0",
     packages=find_packages(exclude=["test"]),
     data_files=[
         ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
@@ -14,12 +14,11 @@ setup(
     zip_safe=True,
     maintainer="juliette",
     maintainer_email="jgrosset10@gmail.com",
-    description="Lrauv agent for LOTUSim simulation",
-    license="SPDX-License-Identifier: EPL-2.0",
-    tests_require=["pytest"],
+    description="External Agent: LrauvPropeller",
+    license="EPL-2.0",
     entry_points={
         "lotusim.agents": [
-            "lrauv = lrauv.lrauv:Lrauv",
+            "lrauv_propeller = lrauv_propeller:LrauvPropeller",
         ],
         "console_scripts": [],
     },
