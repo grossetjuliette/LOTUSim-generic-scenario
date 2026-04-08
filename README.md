@@ -318,7 +318,7 @@ To use an LRAUV with active propellers, initialise it in the config file `defens
 
 Start the simulation as usual with:
 ```sh
-./src/simulation_run/executable/scenario_launch.sh --config $HOME/Documents//workspace/lotusim/LOTUSim-generic-scenario/src/simulation_run/config/defenseScenario.json
+./src/simulation_run/executable/scenario_launch.sh --config $HOME/Documents/workspace/lotusim/LOTUSim-generic-scenario/src/simulation_run/config/defenseScenario.json
 ```
 
 Then open a second terminal:
@@ -335,7 +335,7 @@ Whenever you are ready to send a propeller command, send in the second terminal:
   ros2 topic pub /defenseScenario/lrauvpropeller0/control_lrauv std_msgs/msg/Bool "data:  true"
   ```
 
-You can change the value of the `rpm` sent by modifying the file `/home/marie/Documents/workspace/lotusim/lotusim-generic-scenario/src/agents/lrauv/lrauv/lrauv_propeller.py`, in this line:
+You can change the value of the `rpm` sent by modifying the file `/home/marie/Documents/workspace/lotusim/lotusim-generic-scenario/src/external_packages/lrauv_propeller/lrauv_propeller/lrauv_propeller.py`, in this line:
   ```py
   self.send_propeller_command(rpm=100.0, pd=0.88) # example to send a propeller command
   ```
